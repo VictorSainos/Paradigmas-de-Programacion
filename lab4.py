@@ -124,3 +124,140 @@ class Cuadrilatero:
 # Rectangulo es hijo de cuadrilatero
 # Rectangulo(Cuadrilatero)
 #===============================================
+class Rectangulo(Cuadrilatero):
+    def __init__(self,a ,b):
+        #==================================
+        # Constructor de su madre
+        #==================================
+        super().__init__(a,b,a,b)
+
+#==================================
+# Su nieto Cuadrado
+# Hijo de rectangulo
+#==================================
+class Cuadrado(Rectangulo):
+    def __init__(self, a):
+        super().__init__(a,a)
+
+    def area(self):
+        area=self.lado1**2
+        return area
+
+    #def perimetro(self):
+    #    p =  4.0*self.lado1
+    #    print(("perimetro =",p)
+    #    return p
+
+#=============================
+# Crear cuadrado
+#=============================
+cuadrado1 = Cuadrado(5)
+
+#=======================================================
+# Llamar al metodo perimetro de su abuelo Cuadralatero
+#=======================================================
+perimetro1 = cuadrado1.perimetro()
+
+#=========================================================
+# Llamar a su peropio metodo area
+#=========================================================
+area1 = cuadrado1.area()
+
+print("Perimetro = ", perimetro1)
+print("Area =", area1)
+
+#/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+# Sobre-escribir un metodo de su madre o abuela o tatabuela...
+# Es volver a definir una funcion ya existente
+#/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+#=======================================
+# La clase A tiene tres numeros reales
+#=======================================
+class A:
+    __a:float=0.0
+    __b:float=0.0
+    __c:float:0.0
+
+    def _-init__(self,a:float,b:float,c:float):
+        self.a = a
+        self.b = b
+        self.c = c
+
+#============================================
+# La clase B tiene dos numeros reales
+#============================================
+class B:
+    __d:float=0.0
+    __e:float=0.0
+
+    def __init__(self,d:float,e:float):
+        self.d = d
+        self.e = e
+
+    #===========================================
+    # Metodo sumar todo (internos + externos)
+    #===========================================
+    def sumar_todo(self, aa:float, bb:float)
+    x:float=self.d + self.e + aa + bb
+    return x
+
+#/\/\/\/\/\/\/\/\
+# ASOCIACION
+#/\/\/\/\/\/\/\/\
+# Usando objetos idependientes
+objetoA = A(1.0, 2.0, 3.0)
+objetoB = B (4.0, 5.0)
+print(objetoA.sumar_todo(objetoA.a, objetoA.b))
+
+#==============================================
+# El objeto C tiene dos reales y un objeto A
+# El objeto A se instancia dentro de C
+#==============================================
+class C:
+    __d:float=0.0
+    __e:float=0.0
+    __Aa:A=None
+      
+    def __init_(self, d:float, e:float):
+        self.d = d
+        self.e = e
+        # A esta instanciada adentro
+        self.Aa(1.0,2.0,3.0)
+      
+    def sumar_todo(self):
+        x:float = self.d + self.e + self.Aa.a + self.Aa.b
+        return x
+
+#================================
+# COMPISICION
+# Contine otro objeto adentro
+#===============================
+objetoC = C(4.0, 5,0)
+print(objetoC.sumar_todo())
+
+#============================================
+# Objeto D tiene dos reales y un objeto A
+# definido por fuera
+#============================================
+class D:
+    __d:float:0.0
+    __e:float=0.0
+    __Aa:A=None
+
+    def __init__(self, d:float, e:float, Aa:A):
+        self.d = d
+        self.e = e
+        self.Aa = Aa
+
+    def sumar_todo(self):
+        x:float = self.d + self.e + self.Aa.a + self.Aa.b
+        return x
+
+#==========================================
+# AGREGACION
+# Construye el objeto agregado por fuera
+#==========================================
+objetoD = D(4.0, 5.0, objetoA)
+print(objetoD.sumar_todo())
+
