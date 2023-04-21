@@ -41,7 +41,7 @@ si = s1&s2 # intersección
 print(si)
 
 sr = s1-s2  # Dieferencia de conjuntos
-print(sp)
+print(sr)
 ss = s1^s2 # Diferencia simetrica
 print(ss)
 
@@ -64,10 +64,10 @@ numNames={1:"One", 2:"Two", 3:"Three"}
 decNames={1.5:"One and Half", 2.5:"Two and Half", 3.5:"Three and Half"}
 
 # Lave tipla, valor string 
-items={ ("Parker", "Reynolds", "Camlin"):"pen", ("LG", "Whirlpool", "Samsung"): "Refrigerator")
+items={ ("Parker", "Reynolds", "Camlin"):"pen", ("LG", "Whirlpool", "Samsung"): "Refrigerator"}
 
 # Llave string, valor int  
-romanNUms = {'I':1, 'II':2, 'III':3, 'IV':4, 'V':5}
+romanNums = {'I':1, 'II':2, 'III':3, 'IV':4, 'V':5}
 print(romanNums)
 print(romanNums["I"])
 
@@ -76,7 +76,7 @@ print(capitals.get("india"))
 
 # Reportar llave y valor
 for k in capitals:
-	print("Key =", Value = " + capitals[k])
+    print("Key =" + k +  ", Value = " + capitals[k])
 
 # Nuevo dato para eldiccionario
 capitals["Mexico"] = "CDMX"
@@ -114,14 +114,14 @@ print(miprimeralista)
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # Llenado de listas
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-miprimeralista = {1,"Javier",1.34,"Bosco","Angel","Abigail",True)
+miprimeralista = {1,"Javier",1.34,"Bosco","Angel","Abigail",True}
 print(miprimeralista)
 
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # list: hacer una lista
 # range(i,j): secunacia de i hasta j-1
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-nus = list(range(1,6))
+nums = list(range(1,6))
 
 for i in nums:
     print(i)
@@ -157,8 +157,8 @@ print(L1+L2)
 # Llenado a mano
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 potencial = []
-for in in range(0,10000)
-    potencial.appendfloat(i))
+for i  in range(0,10000):
+    potencial.appendfloat(i)
 print(potencial[100])
             
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
