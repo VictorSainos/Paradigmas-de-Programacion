@@ -151,5 +151,17 @@ print(round(3.14154,4))
 parrafo = """ En el bosque de la china
  la chinita se perdió """
 print(parrafo)
-#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
- 
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# La funcion len() obtiene el tamaño del string
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+n=len(parrafo)
+print(n)
+
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# Las letras en un string ocupan lugares como en un areglo
+# (tambien de atras para adelante comenzando en -1 el ultimo)
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+palabra = "hola"
+print(palabra[0])
+print(palabra[-4])
+
