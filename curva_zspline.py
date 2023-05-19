@@ -10,7 +10,7 @@ import math
 # Conjuntos de puntos
 #=====================
 #Números de puntos
-nump:np.int32 = 8
+nump:np.int32 = 16
 # Dimensión
 dim:np.int32 = 2
 # Memoria para puntos
