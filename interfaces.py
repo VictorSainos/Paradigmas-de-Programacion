@@ -26,7 +26,7 @@ from aplicacion.modelos.usuario import Usuario
 # Del directorio aplicaion, el msubdirectorio negocios
 # el archivo manejodeinscripciones.py : trae el objeto ManejoDeInscripciones
 #=============================================================================
-import aplicacion.negocios.manejodeinscripciones import ManejoDeInscripciones
+from aplicacion.negocios.manejodeinscripciones import ManejoDeInscripciones
 
 #=========================
 # Crear el objeto Usuario
@@ -63,5 +63,5 @@ repositorioBaseDeDatos = BaseDeDatos("localhost","admin","admin123")
 #=============================================================
 # Interface inscribirUsuario del objeto ManejoDeInscripciones
 #=============================================================
-ManjeoDeInscripciones.inscribir(usuarui,repositorioBaseDeDatos)
+ManejoDeInscripciones.inscribirUsuario(usuario,repositorioBaseDeDatos)
 print("\n")

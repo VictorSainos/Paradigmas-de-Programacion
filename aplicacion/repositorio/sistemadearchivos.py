@@ -1,4 +1,4 @@
-from aplicacion.repositorio.repositoriodeusuario import RepositorioDeUsuarios
+from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 from aplicacion.modelos.usuario import Usuario
 
 #==============================================
@@ -15,7 +15,7 @@ class SistemaDeArchivos(RepositorioDeUsuarios):
 
     def guardar(mi, usuario:Usuario) -> None:
         xml = f"</root></name>{usuario.getNombre()}</name></lastname>{usuario.getApellido()}</lastName></age>{usuario.getEdad()}</age></root>"
-        print(f"Guardando usuario en el archivo :{mi.__directorio}/{usuarui.gerNombre()}")
+        print(f"Guardando usuario en el archivo :{mi.__directorio}/{usuario.getNombre()}")
         print(xml)
 
     def cerrar(mi) -> None:
