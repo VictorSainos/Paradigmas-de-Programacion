@@ -15,6 +15,7 @@ try:
   print(cliente.imprimirInfo())
   cliente.retirarDinero(400)
   print(cliente.imprimirInfo())
+
 #=======================================================
 # Exception es el objeto mas general del error
 #=======================================================
@@ -25,7 +26,7 @@ except Exception as e:
 # Error por usar un atributo privado
 #=======================================
 try:
-  print(cliente.__nombres)
+  print(cliente.nombres)
 
 except Exception as ex:
   print("Error " + str(ex))
