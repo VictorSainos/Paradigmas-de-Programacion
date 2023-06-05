@@ -41,7 +41,7 @@ def subdivision_recursiva(nodo:Nodo, k:int):
     subdivision_recursiva(nodo.x2, k)
 
     p = cuantas_contiene(nodo.x0+w_, nodo.y0, w_, h_, nodo.particulas)
-    nodo.x3= Nodo(nodo.x0 + w_, nodo.y0, w_, h_, nodo.particulas)
+    nodo.x3= Nodo(nodo.x0 + w_, nodo.y0, w_, h_, p)
     subdivision_recursiva(nodo.x3, k)
 
     p = cuantas_contiene(nodo.x0+w_, nodo.y0+h_, w_, h_, nodo.particulas)
@@ -92,11 +92,11 @@ class Qtree():
         print("Minima area por segmento: %.3f unirs" %min(areas))
         for n in c:
             plt.gcf().gca().add_patch(patches.Rectangle((n.x0, n.y0), n.ancho, n.alto, fill=False))
-            x = [particula.x for particula in self.particulas]
-            y = [particula.y for particula in self.particulas]
-            plt.plot(x, y, 'ro')  # muestra las particulas como puntos rojos
-            plt.show()
-            return
+        x = [particula.x for particula in self.particulas]
+        y = [particula.y for particula in self.particulas]
+        plt.plot(x, y, 'ro')  # muestra las particulas como puntos rojos
+        plt.show()
+        return
 
 qtree = Qtree(2,200)
 qtree.subdividir()
